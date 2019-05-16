@@ -1,6 +1,9 @@
-<p>
-  <strong>Name:</strong>
-  <%= @cocktail.name %>
-</p>
+<h1><%= @cocktail.name %></h1>
 
+<h3>Ingredients</h3>
+<ol>
+<% @cocktail.doses.each do |dose| %>
+  <li><%= dose.ingredient.name %> - <%= dose.description %></li>
+</ol>
+<% end %>
 <%= link_to 'Back', root_path %>

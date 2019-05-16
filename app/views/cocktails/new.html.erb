@@ -5,9 +5,9 @@
     <div class="notice notice-danger">
       Please correct the following errors:
       <ul>
-      <% @cocktail.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
+        <% @cocktail.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
       </ul>
   </div>
   <% end %>
@@ -16,8 +16,8 @@
     <%= f.input :name %>
   </div>
 
-  <div class="form-actions">
-    <%= f.button :submit %>
+  <div class="form-actions btn btn-danger">
+    <%= f.button :submit%>
   </div>
 <% end %>
 
