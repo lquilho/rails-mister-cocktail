@@ -2,8 +2,8 @@
 
 <%= link_to 'New Cocktail', new_cocktail_path %>
 
-<ol>
+<ul>
 <% @cocktails.each do |cocktail| %>
   <li><%= link_to cocktail.name, cocktail %></li>
 <% end %>
-</ol>
+</ul>

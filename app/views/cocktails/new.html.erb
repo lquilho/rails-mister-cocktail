@@ -1,24 +1,5 @@
-<h1>New cocktail</h1>
+<h2>Create new cocktail</h2>
 
-<%= simple_form_for(@cocktail) do |f| %>
- <% if !@cocktail.errors.any? %>
-    <div class="notice notice-danger">
-      Please correct the following errors:
-      <ul>
-        <% @cocktail.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
-        <% end %>
-      </ul>
-  </div>
-  <% end %>
+<%= render 'form', button_label: 'Create!', cocktail: @cocktail %>
 
-  <div class="form-inputs">
-    <%= f.input :name %>
-  </div>
-
-  <div class="form-actions btn btn-danger">
-    <%= f.button :submit%>
-  </div>
-<% end %>
-
-<%= link_to 'Back', root_path %>
+<%= link_to 'Go back', cocktails_path %>
